@@ -1,117 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- displays site properly based on user's device -->
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="./images/favicon-32x32.png"
-		/>
-		<link rel="stylesheet" href="/styles/styles.css" />
-		<title>Frontend Mentor | Time tracking dashboard</title>
-	</head>
-	<body>
-		<main>
-			<div class="time-tracker__wrapper">
-				<div class="title-container">
-					<img src="" alt="" class="title-image" />
-					<p class="title-text">Report for</p>
-					<h1 class="title-name">Jeremy Robson</h1>
-					<div class="time__period-container">
-						<h5 class="daily-title">Daily</h5>
-						<h5 class="weekly-title">Weekly</h5>
-						<h5 class="monthly-title">Monthly</h5>
+	<link
+	rel="icon"
+	type="image/png"
+	sizes="32x32"
+	href="./images/favicon-32x32.png"
+	/>
+	<link rel="stylesheet" href="/styles/styles.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+	rel="stylesheet"/>
+	<title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+<body>
+<main>
+	<div class="time-tracker__wrapper">
+		<section class="title">
+			<div class="title-container">
+				<img src="/images/image-jeremy.png" alt="" class="title-image" />
+				<p class="title-text">Report for</p>
+				<h1 class="title-name">Jeremy Robson</h1>
+			</div>
+			<div class="time__period-container">
+				<p class="daily-title active" id="daily-picker">Daily</p>
+				<p class="weekly-title" id="weekly-picker">Weekly</p>
+				<p class="monthly-title" id="monthly-picker">Monthly</p>
+			</div>
+		</section>
+		<section class="category">
+			<div class="category-container work-container">
+				<img src="/images/icon-work.svg" alt="work-icon" class="work-icon category-icon">
+				<div class="category-content">
+					<div class="category-title-container">
+						<p class="category-title">Work</p>
+						<img src="/images/icon-ellipsis.svg" alt="icon-ellipsis" class="category-title-icon" srcset="">
+					</div>
+					<div class="daily-container work__daily-container">
+						<h2 class="category-daily__current">5hrs</h2>
+						<h5 class="category-daily__previous">Previous - 7hrs</h5>
+					</div>
+					<div class="weekly-container work__weekly-container">
+						<h2 class="category-weekly__current">32hrs</h2>
+						<h5 class="category-weekly__previous">Previous - 36hrs</h5>
+					</div>
+					<div class="monthly-container work__monthly-container">
+						<h2 class="category-monthly__current">103hrs</h2>
+						<h5 class="category-monthly__previous">Previous - 128hrs</h5>
 					</div>
 				</div>
-				<div class="category-container work-container">
-					Work 5hrs
-					<!-- daily -->
-					Previous - 7hrs
-					<!-- daily -->
-					32hrs
-					<!-- weekly -->
-					Previous - 36hrs
-					<!-- weekly -->
-					103hrs
-					<!-- monthly -->
-					Previous - 128hrs
-					<!-- monthly -->
-				</div>
-				<div class="category-container play-container">
-					Play 1hr
-					<!-- daily -->
-					Previous - 2hrs
-					<!-- daily -->
-					10hrs
-					<!-- weekly -->
-					Previous - 8hrs
-					<!-- weekly -->
-					23hrs
-					<!-- monthly -->
-					Previous - 29hrs
-					<!-- monthly -->
-				</div>
-				<div class="category-container study-container">
-					Study 0hrs
-					<!-- daily -->
-					Previous - 1hr
-					<!-- daily -->
-					4hrs
-					<!-- weekly -->
-					Previous - 7hrs
-					<!-- weekly -->
-					13hrs
-					<!-- monthly -->
-					Previous - 19hrs
-					<!-- monthly -->
-				</div>
-
-				<div class="category-container exercise-container">
-					Exercise 1hr
-					<!-- daily -->
-					Previous - 1hr
-					<!-- daily -->
-					4hrs
-					<!-- weekly -->
-					Previous - 5hrs
-					<!-- weekly -->
-					11hrs
-					<!-- monthly -->
-					Previous - 18hrs
-					<!-- monthly -->
-				</div>
-				<div class="category-container social-container">
-					Social 1hr
-					<!-- daily -->
-					Previous - 3hrs
-					<!-- daily -->
-					5hrs
-					<!-- weekly -->
-					Previous - 10hrs
-					<!-- weekly -->
-					21hrs
-					<!-- monthly -->
-					Previous - 23hrs
-					<!-- monthly -->
-				</div>
-				<div class="category-container care-container">
-					Self Care 0hrs
-					<!-- daily -->
-					Previous - 1hr
-					<!-- daily -->
-					2hrs
-					<!-- weekly -->
-					Previous - 2hrs
-					<!-- weekly -->
-					7hrs
-					<!-- monthly -->
-					Previous - 11hrs
-					<!-- monthly -->
+			</div>
+			<div class="category-container play-container">
+				<img src="/images/icon-play.svg" alt="play-icon" class="play-icon category-icon">
+				<div class="category-content">
+					<div class="category-title-container">
+						<p class="category-title">Play</p>
+						<img src="/images/icon-ellipsis.svg" alt="icon-ellipsis" class="category-title-icon" srcset="">
+					</div>
+					<div class="daily-container play__daily-container">
+						<h2 class="category-daily__current">1hrs</h2>
+						<h5 class="category-daily__previous">Previous - 2hrs</h5>
+					</div>
+					<div class="weekly-container play__weekly-container">
+						<h2 class="category-weekly__current">10hrs</h2>
+						<h5 class="category-weekly__previous">Previous - 8hrs</h5>
+					</div>
+					<div class="monthly-container play__monthly-container">
+						<h2 class="category-monthly__current">23hrs</h2>
+						<h5 class="category-monthly__previous">Previous - 29hrs</h5>
+					</div>
 				</div>
 			</div>
-		</main>
-	</body>
+			<div class="category-container study-container">
+				<img src="/images/icon-study.svg" alt="study-icon" class="study-icon category-icon">
+				<div class="category-content">
+					<div class="category-title-container">
+						<p class="category-title">Study</p>
+						<img src="/images/icon-ellipsis.svg" alt="icon-ellipsis" class="category-title-icon" srcset="">
+					</div>
+					<div class="daily-container study__daily-container">
+						<h2 class="category-daily__current">0hrs</h2>
+						<h5 class="category-daily__previous">Previous - 1hrs</h5>
+					</div>
+					<div class="weekly-container study__weekly-container">
+						<h2 class="category-weekly__current">4hrs</h2>
+						<h5 class="category-weekly__previous">Previous - 7hrs</h5>
+					</div>
+					<div class="monthly-container study__monthly-container">
+						<h2 class="category-monthly__current">13hrs</h2>
+						<h5 class="category-monthly__previous">Previous - 19hrs</h5>
+					</div>
+				</div>
+			</div>
+			<div class="category-container exercise-container">
+				<img src="/images/icon-exercise.svg" alt="exercise-icon" class="exercise-icon category-icon">
+				<div class="category-content">
+					<div class="category-title-container">
+						<p class="category-title">Exercise</p>
+						<img src="/images/icon-ellipsis.svg" alt="icon-ellipsis" class="category-title-icon" srcset="">
+					</div>
+					<div class="daily-container exercise__daily-container">
+						<h2 class="category-daily__current">1hrs</h2>
+						<h5 class="category-daily__previous">Previous - 1hrs</h5>
+					</div>
+					<div class="weekly-container exercise__weekly-container">
+						<h2 class="category-weekly__current">4hrs</h2>
+						<h5 class="category-weekly__previous">Previous - 5hrs</h5>
+					</div>
+					<div class="monthly-container exercise__monthly-container">
+						<h2 class="category-monthly__current">11hrs</h2>
+						<h5 class="category-monthly__previous">Previous - 18hrs</h5>
+					</div>
+				</div>
+			</div>
+			<div class="category-container social-container">
+				<img src="/images/icon-social.svg" alt="social-icon" class="social-icon category-icon">
+				<div class="category-content">
+					<div class="category-title-container">
+						<p class="category-title">Social</p>
+						<img src="/images/icon-ellipsis.svg" alt="icon-ellipsis" class="category-title-icon" srcset="">
+					</div>
+					<div class="daily-container social__daily-container">
+						<h2 class="category-daily__current">1hrs</h2>
+						<h5 class="category-daily__previous">Previous - 3hrs</h5>
+					</div>
+					<div class="weekly-container social__weekly-container">
+						<h2 class="category-weekly__current">5hrs</h2>
+						<h5 class="category-weekly__previous">Previous - 10hrs</h5>
+					</div>
+					<div class="monthly-container social__monthly-container">
+						<h2 class="category-monthly__current">21hrs</h2>
+						<h5 class="category-monthly__previous">Previous - 23hrs</h5>
+					</div>
+				</div>
+			</div>
+			<div class="category-container care-container">
+				<img src="/images/icon-self-care.svg" alt="care-icon" class="care-icon category-icon">
+				<div class="category-content">
+					<div class="category-title-container">
+						<p class="category-title">Self Care</p>
+						<img src="/images/icon-ellipsis.svg" alt="icon-ellipsis" class="category-title-icon" srcset="">
+					</div>
+					<div class="daily-container care__daily-container">
+						<h2 class="category-daily__current">0hrs</h2>
+						<h5 class="category-daily__previous">Previous - 1hrs</h5>
+					</div>
+					<div class="weekly-container care__weekly-container">
+						<h2 class="category-weekly__current">2hrs</h2>
+						<h5 class="category-weekly__previous">Previous - 2hrs</h5>
+					</div>
+					<div class="monthly-container care__monthly-container">
+						<h2 class="category-monthly__current">7hrs</h2>
+						<h5 class="category-monthly__previous">Previous - 11hrs</h5>
+					</div>
+				</div>
+			</div> 
+		</section>
+	</div>
+</main>
+<script src="/app.js"></script>
+</body>
 </html>
