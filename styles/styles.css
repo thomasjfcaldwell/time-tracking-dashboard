@@ -31,6 +31,7 @@ main {
 @media screen and (max-width: 375px) {
     main {
         height: fit-content;
+        margin: 5rem auto;
     }
 
     .time-tracker__wrapper {
@@ -97,29 +98,39 @@ main {
     .title-container {
         background-color: hsl(246, 80%, 60%);
         border-radius: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(2, max-content);
+        padding: 1rem 0;
+        height: 100px;
     }
 
     .title-container>img {
-        width: 70px;
+        width: 60px;
         border: 2px solid white;
         border-radius: 50%;
+        grid-area: 1/1/3/2;
+        margin-left: 20px;
+        margin-top: 5px;
     }
 
     .title-container>p {
         font-size: 0.75rem;
-        margin-top: 0rem;
+        grid-area: 1/2/2/3;
+        padding: 0;
+        margin-top: 0.75rem;
     }
 
     .title-container>h1 {
         font-weight: 300;
-        font-size: 1rem;
+        font-size: 1.4rem;
         padding: 0;
         color: white;
-        margin: 0;
+        grid-area: 2/2/3/3;
     }
 
     .time__period-container {
-        padding: 1rem 1.5rem;
+        padding: 0.4rem 1.5rem;
         display: flex;
         justify-content: space-between;
     }
@@ -157,6 +168,10 @@ main {
         display: flex;
         align-items: flex-end;
         height: 200px;
+    }
+
+    .category-content>div>h2 {
+        font-size: 1rem;
     }
 }
 
